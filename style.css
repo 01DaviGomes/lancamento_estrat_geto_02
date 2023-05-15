@@ -1,0 +1,677 @@
+/* importacao das fontes  via CSS */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    /* incluir toda a margem do elemento */
+    box-sizing: border-box;
+    font-size: 100%;
+    /* impedir qque elementos fora da pagina criem um scroll automatico  */
+
+    resize: none;
+}
+
+/* variaveis css */
+:root {
+    --font_amatic: 'Amatic SC', cursive;
+    --font_ptsans: 'PT Sans', sans-serif;
+    --font_montserrat: 'Montserrat', sans-serif;
+    --verde: #53B573;
+    --branco: #ffffff;
+}
+
+/* classe de alinhamento  */
+.alinhamento {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* cabecalho */
+header {
+    background-color: var(--verde);
+    padding-top: 5px;
+    /* padding-bottom é espacamento baixo */
+    padding-bottom: 5px;
+}
+
+.logo {
+    width: 55px;
+}
+
+nav {
+    /* colocar itens lado a lado - logo e links*/
+    display: flex;
+    /* espaco entre itens */
+    justify-content: space-between;
+    margin: auto;
+    /* alinhar no centro vertical  */
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    /* retirar as bolinhas de marcacao de lsita  */
+    list-style: none;
+}
+
+/* chamar o elemento "a" da classe menu  */
+.menu a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--font_mont);
+    font-weight: 800;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid var(--branco) ;
+    color: var(--branco);
+}
+
+/* seçao quem somos */
+
+main {
+    background-color: var(--branco);
+}
+
+h1 {
+    position: absolute;
+    left: -999em;
+    width: 1em;
+    overflow: hidden;
+}
+
+.quem_somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0;
+}
+
+.primeira_foto {
+    width: 106%;
+    height: 300px;     
+    border-radius: 0px 0px 30px 30px;
+}
+
+.sobre {
+    text-align: center;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre_titulo {
+    font-family: var(--font_amatic);
+    font-size: 60px;
+    margin-top: 70px;
+    font-weight: 600;
+}
+
+.sobre_texto {
+    font-family: var(--font_ptsans);
+    font-size: 22px;
+}
+
+.btn_esg {
+    margin-bottom: 50px;
+    background: var(--verde);
+    border-radius: 20px 0px 20px 0px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn_esg a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Data */
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font_amatic);
+    font-size: 80px;
+   font-weight: 400;
+    color: var(--branco);
+    background-color: var(--verde);
+    padding: 100px;
+}
+    .datadia{
+        font-weight: 600;
+    }
+
+span {
+    text-transform: uppercase;
+}
+
+/* Imagens */
+.imagens {
+    background-color: var(--verde);
+    padding-bottom: 100px;
+  
+    
+    
+}
+
+.imgs {
+    display: flex;
+    justify-content: space-around;
+    
+    
+
+}
+
+/* chamar a classe e pegar toso os elentos referente a ela  */
+.imgs>* {
+    width: 300px;    
+    height: 350px;
+    border-radius: 30px;   
+    
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+/* ESG  */
+.esg {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0px;
+    
+}
+
+.sobre_esg {
+    text-align: center;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre_esg_titulo {
+    font-family: var(--font_amatic);
+    font-size: 60px;
+    font-weight: 600;
+
+}
+
+.sobre_esg_texto {
+    font-family: var(--font_ptsans);
+    font-size: 20px;
+}
+
+.esg img {
+    box-shadow: 10px 10px 40px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 70px;
+    width: 45%;
+    height: 45%;  
+    /* exemplo de totacao imagem
+    transform:  rotate(45deg);  */
+    
+}
+
+/* Formulario  */
+.formulario {
+    background-color: var(--verde);
+    padding: 100px 0px;
+}
+
+.formulario_titulo {
+    text-align: center;
+    font-family: var(--font_amatic);
+    font-size: 60px;
+    color: var(--branco);
+    margin: 15px;
+    font-weight: 600;   
+      
+}
+
+/* mudar cor botao enviar */
+
+.formulario button:hover{
+
+background-color: var(--verde);    
+    color: var(--branco);
+    border: 1px solid var(--branco);
+
+}
+
+form {
+    color: white;
+    font-family: var(--font_ptsans);
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* pegar todas as div do formulario  */
+form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 700px;
+    width: 90%;
+    /* centralizar sem usar o display flex - margin valor 1= acima e abaixo / valor 2= laterais */
+    margin: 0 auto;
+}
+
+label {
+    font-size: 25px;
+}
+
+input {
+    height: 35px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+textarea {
+    font-size: 22px;
+    padding: 20px;
+    display: inline-block;
+
+}
+
+.borda {
+    border: 1px solid var(--branco_pastel);
+    border-radius: 15px;
+}
+
+/* Botao do formulario  */
+.btn_forms {
+    background-color: white;
+    border: 1px solid var(--branco);
+    
+    border-radius: 20px 0px 20px 0px;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    color: var(--verde);
+    margin: 0 auto;    
+
+}
+/* Contato edicao tadeu */
+.mapa {
+    width: 450px;
+}
+
+.contato {
+    padding: 100px 0px; 
+    
+
+}
+
+.contato_titulo {
+    font-family: var(--font_amatic);
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contato_conteudo {
+
+    display: flex;
+    /* flex-direction: column-reverse; */
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.borda_mapa {
+    border: 5px solid var(--verde);
+    width: 500px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato_info {
+    font-family: var(--font_ptsans);
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.info>i {
+    margin-right: 20px;
+    color: var(--verde);
+}
+
+/* Footer  */
+
+footer {
+    background-color: var(--verde);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    
+    color: white;
+    font-family: var(--font_ptsans);
+    font-size: 19px;
+  
+    /* height: 50px; */
+}
+
+.footer_geral{
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.rodape1 {
+
+    list-style: none;  
+     
+   
+}
+
+.rodape2 {
+
+    list-style: none; 
+    display: flex;  
+    gap: 20px;
+   
+}
+
+.rodape1 a {
+    
+    color: white;
+    text-decoration: none;
+    font-family: var(--font_ptsans);
+    font-size: 20px;
+    
+    
+}
+
+.rodape2 a {
+    font-size: 30px;
+    
+    color: white;
+    text-decoration: none;
+}
+
+
+.rodape_titulo{
+    margin: 30px 0px;
+    font-family: var(--font_amatic);
+    font-size: 40px;
+    font-weight: 600;
+
+}
+
+
+.rodape_section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.direitos{
+    font-family: var(--font_amatic);
+    font-size: 22px;
+    text-align: center;
+    margin: 25px 0px;
+}
+
+/* Responsividade */
+
+
+
+@media screen and (max-width: 1440px) {
+    #burguer {
+        display: none;
+    }
+
+    .alinhamento {
+        width: 100%
+    }
+
+    nav {
+        padding: 0 50px;
+    }
+
+    .quem_somos {
+        padding: 100px 50px;
+    }
+
+    .sobre {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .esg {
+        display: flex;
+        justify-content: space-around;
+        padding: 100px 0px;
+        align-items: center;
+       }
+
+    .esg_imagem {
+        width: 45%;      
+
+    }
+
+    .primeira_foto {
+        width: 110%;
+        
+    }
+
+    .sobre_esg_texto {
+        font-size: 22px;
+    }
+
+    .sobre_esg {
+        width: 480px;
+    }
+
+    .contato_conteudo{
+        width: 75%;
+        margin: 0 auto;
+    }  
+
+}
+
+@media screen and (min-width: 900px) {
+    #burguer{
+        display: none;
+    }
+    
+}
+
+
+@media screen and (max-width: 900px) {
+    .quem_somos {
+
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .sobre {
+        margin-top: 30px;
+    }
+
+    .sobre_titulo {
+        margin-top: 30px;
+
+    }
+
+    .data {
+        font-size: 85px;
+    }
+
+    .imgs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+    }
+
+    .esg {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .sobre_esg {
+        width: 600px;
+    }
+
+
+    .contato_conteudo {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #burguer {
+        display: block;
+        color: #ffffff;
+        font-size: 55px;
+    }
+
+    #itens_menu {
+        position: absolute;
+        /* viewport height  */
+        height: 92vh;
+        /* viewport width  */
+        width: 50vw;
+        top: 9vh;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--verde);
+        gap: 50px;
+    }
+
+    .menu li {
+        padding: 50px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .quem_somos {
+        flex-direction: column;
+    }
+
+    .sobre {
+        margin-top: 30px;
+    }
+
+    .data {
+        font-size: 70px;
+    }
+
+    .imgs {
+        gap: 50px;
+    }
+
+    .esg {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre_esg {
+        width: 50%;
+    }
+
+   
+
+}
+
+/*  */
+
+@media screen and (max-width: 580px) {
+    #burguer {
+        display: block;
+        color: #ffffff;
+        font-size: 55px;
+    }
+
+    #itens_menu {
+        position: absolute;
+        /* viewport height  */
+        height: 92vh;
+        /* viewport width  */
+        width: 50vw;
+        top: 16vh;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--verde);
+        gap: 50px;
+    }
+
+    .menu li {
+        padding: 50px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .data {
+        font-size: 45px;
+    }
+
+    .esg img {
+        width: 70%;
+    }
+
+    .mapa {
+        width: 450px;
+        
+        
+    }
+
+    .borda_mapa {
+        width: 450px;
+       
+    }
+
+    .contato_info {
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .primeira_foto{
+        width: 120%;
+    }
+
+}
+
+
+
